@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:aqurvent_career/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,13 +49,10 @@ class _SplashscreenState extends State<Splashscreen> {
   }
 
   route() async {
-
-  //   Navigator.push(  
-  //   context,  
-  //   MaterialPageRoute(builder: (context) => Home()),  
-  // );  
-    
-    
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Home()),
+    );
   }
 
   initScreen(BuildContext context) {
