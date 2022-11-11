@@ -26,21 +26,23 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 97, 154, 252),
         centerTitle: true,
         title: const Text("Aqurvent Career"),
       ),
+      drawer: Drawer(),
       // drawer: const CustomDrawer(name: "name", nameChar: "n", mobNo: "mobNo"),
       bottomNavigationBar: ConvexAppBar(
         initialActiveIndex: selectedPage,
         backgroundColor: const Color.fromARGB(255, 97, 154, 252),
         items: const [
-          TabItem(icon: Icons.person_pin_circle, title: 'Home'),
-          TabItem(icon: Icons.shopping_cart, title: 'Register'),
-          TabItem(icon: Icons.upload_file_rounded, title: 'Testimonials'),
-          TabItem(icon: Icons.notifications, title: 'About'),
-          TabItem(icon: Icons.notifications, title: 'Contact'),
+          TabItem(icon: Icons.home, title: 'Home'),
+          TabItem(icon: Icons.app_registration_rounded, title: 'Register'),
+          TabItem(icon: Icons.comment_rounded, title: 'Testimonials'),
+          TabItem(icon: Icons.info, title: 'About'),
+          TabItem(icon: Icons.contact_page, title: 'Contact'),
         ],
         onTap: (index) {
           setState(() {
@@ -49,6 +51,7 @@ class _HomeState extends State<Home> {
         },
       ),
       body: _pageNo[selectedPage],
+      
     );
   }
 }
